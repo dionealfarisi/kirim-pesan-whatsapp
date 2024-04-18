@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesan WhatsApp</title>
+  <link rel="stylesheet" href="/css/index.css" type="text/css" media="all" />
+  <script src="/js/index.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+  <div class="send">
+  <h2>WhatsApp</h2>
+  <!-- Tombol untuk memilih opsi input -->
+  <button onclick="selectContactOption('contacts')">Kontak</button>
+  <button onclick="selectContactOption('manual')">Manual</button>
+  <input type="hidden" id="selectedContact" value="">
+  <input type="text" id="selectedContactName" value="" readonly>
+  <div id="manualInput" style="display: none;">
+    <label for="phoneNumber">Masukkan Nomor:</label><br>
+    <input type="tel" id="phoneNumber" name="phoneNumber">
+  </div>
+  <br />
+  <label for="message">Pesan:</label><br />
+  <textarea id="message" rows="4" cols="20"></textarea><br />
+  <button onclick="sendMessage()">Kirim</button>
+  <br />
+  </div>
+</body>
+</html>
